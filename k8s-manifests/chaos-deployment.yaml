@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chaos-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: chaos-app
+  template:
+    metadata:
+      labels:
+        app: chaos-app
+    spec:
+      serviceAccountName: chaos-sa
+      containers:
+      - name: chaos-app
+        image: shreyasing27/chaos-app:latest
+        ports:
+        - containerPort: 5000
+
