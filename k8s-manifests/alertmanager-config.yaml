@@ -1,4 +1,3 @@
-# alertmanager-config.yaml
 global:
   resolve_timeout: 5m
 
