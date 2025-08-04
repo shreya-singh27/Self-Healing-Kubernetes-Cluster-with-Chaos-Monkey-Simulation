@@ -8,7 +8,7 @@ route:
 receivers:
   - name: 'slack-notifications'
     slack_configs:
-      - api_url: 'https://hooks.slack.com/services/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'
+      - api_url: '<YOUR_SLACK_WEBHOOK_URL>'
         channel: '#new-channel'
         send_resolved: true
         title: '{{ .Status | toUpper }}: {{ .CommonAnnotations.summary }}'
